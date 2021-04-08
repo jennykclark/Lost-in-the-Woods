@@ -1,6 +1,8 @@
 //JavaScript for "Lost in the Woods"
 
 
+//JavaScript for "Lost in the Woods"
+
 
 $(document).ready(function(){
 	$(".hide1").click(function(){
@@ -19,6 +21,7 @@ $(document).ready(function(){
 		 $(".LeftButton").show();
 	});
 });
+
 
 $(document).ready(function(){
 	$(".RightButton").hide();
@@ -45,6 +48,7 @@ $(document).ready(function(){
 	audio4.muted = true; 
 	audio5.muted = true;
 });
+
 
 function showStartScreen(){
 	$("#StartScreen").show();
