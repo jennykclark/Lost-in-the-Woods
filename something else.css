@@ -8,6 +8,7 @@ body {
 button {
 	font-family: 'Bebas Neue', cursive;
 	outline: none;
+	font-size: 25px;
 }
 
 #HomePlayButton {
@@ -18,7 +19,6 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -26,9 +26,7 @@ button {
   position: absolute;
   top: 85%;
   left: 40%;
-  font-size: 20px;
   color: white;
-
 }
 #HomePlayButton:hover {
 	 background-color: #590D14;
@@ -246,7 +244,26 @@ button {
 	font-weight: normal;
 }
 
+#LightDisappears:hover {
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
 
+#lightButton:hover {
+	background-color: white;
+	color: black;
+}
+
+#DarknessButton:hover {
+	background-color: black;
+	color: white;
+}
+
+.forsetMoving {
+  width: 100%;
+  height: auto;
+}
 
 .StoryLineW{ /* IF YOU WANT TO CHANGE THE LAYOUT OF THE STORYLINE DIV :) */ 
     height: 170px; 
@@ -274,6 +291,8 @@ button {
 	font-weight: normal;
 }
 
+
+
 .hide1{ /* USE THIS ONE FOR RESTART BUTTONS */
   background-color: #931621; 
   border: 2px solid #931621;
@@ -288,7 +307,6 @@ button {
   position: absolute;
   top: 85%;
   color: white;
-  font-size: 20px;
 }
 .hide1:hover {
 	 background-color: #590D14;
@@ -336,8 +354,6 @@ button {
   position: absolute;
   top: 85%;
   color: white;
-  font-size: 20px;
-
 }
 .hide2:hover {
 	 background-color: #590D14;
@@ -371,6 +387,7 @@ button {
 	font-weight: normal;
 }
 
+
 .hide3{ /* USE THIS ONE FOR RESTART BUTTONS */
   background-color: #931621;  
   border: 2px solid #931621;
@@ -385,8 +402,6 @@ button {
   position: absolute;
   top: 85%;
   color: white;
-  font-size: 20px;
-
 }
 .hide3:hover {
 	 background-color: #590D14;
@@ -624,4 +639,5 @@ border: 1px solid black;
 	margin: auto;
 }
 
+ 
  
