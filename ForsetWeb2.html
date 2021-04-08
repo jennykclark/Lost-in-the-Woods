@@ -1,0 +1,460 @@
+<! DOCTYPE html > 
+
+<html> 
+<head> 
+<title> Lost in the woods </title>  
+<link rel="stylesheet" href="something else.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<script src="jquery-3.5.1.min.js"></script>
+<script src="WebJava2.js"></script>
+
+</head>
+<body> 
+<!-- source code for Modal from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+<button id="crying">Music</button>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+ 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	    <div id="audioplay">
+		<p>Would you like nature sounds?</p>
+	   
+	   <!--campfire.flac is used for campers page-->
+	   <!--campfire.flac is from https://freesound.org/people/CaganCelik/sounds/433783/ --> 
+       <audio id='audio1' src="campfire.flac" type="audio/flac" preload="auto" autobuffer controls loop></audio> 
+	   
+	   <!--footSteps.wav is used for full game-->
+	   <!--footSteps.wav is from https://freesound.org/people/InspectorJ/sounds/347850/ -->
+       <audio id='audio2' src="footSteps.wav" type="audio/wav" preload="auto" autobuffer controls loop></audio>
+	  
+	   <!--hiking.wav is used for movement.html-->
+	   <!--hiking.wav is from https://freesound.org/people/tjandrasounds/sounds/165986/ -->
+	   <audio id="audio3" src="hiking.wav" type="audio/wav" preload="auto" autobuffer controls loop></audio>
+	  
+	   <!--carHorn.wav is used for CarNoises.html and RandomMan.html-->
+       <!--carHorn.wav is from https://freesound.org/people/synthetic-oz/sounds/162703/ -->	  
+	   <audio id='audio4' src="carHorn.wav" type="audio/wav" preload="auto" autobuffer controls loop></audio>
+	  
+	   <!--Queen.mp3 is used for music.html and musicLounder.html-->
+	   <!--Queen.mp3 is from https://freemp3cloud.com/ -->
+	   <audio id='audio5' src="Queen.mp3" type="audio/mp3" preload="auto" autobuffer controls loop></audio>
+	  
+
+<div id="audioButton"> 
+<button onclick="playAudio()" type="button" id="playAudio">Play Audio</button>
+<button onclick="pauseAudio()" type="button" id="pauseAudio">Pause Audio</button>
+</div> 
+
+  </div>
+  </div>
+
+</div>
+
+<!-- Start Story -->
+<section id="StartStory">
+<div class="StoryLineW3"> 
+<p>You realised you drove past a town only 30 minutes ago. Beyond the trees, you see light and smoke, so you decided 
+to walk through the woods hoping it will get you back to town in less time.</p> 
+
+<button type="button" class="hide3">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW2"> 
+<p>You have no phone signal to call for help.</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p> You are driving in the North of Scotland going back to the lodge you have rented. 
+While driving on a single-track road, the car breaks down. It is during the 
+night, in the winter and you don’t plan to be stranded in the middle of nowhere all night.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div> 
+
+<div class="GameDiv"> 
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" id="HomePlayButton" onclick="showStartScreen()">
+<b>Play<b></button>
+</div> 
+</section>
+
+<!-- Start Screen -->
+<section id="StartScreen"> 
+<article id="ChoosePaths"> 
+<p> When you enter the woods, you see three paths. <br> <br> Which one will you pick?</p>
+</article>
+
+<div class="StoryLineW3"> 
+<p>The third path you see, the light starts to die out.</p> 
+
+<button type="button" class="hide3">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW2"> 
+<p>The second path you start to hear muffled sounds of music, but you also see smoke arise from the tree line.</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button> 
+</div> 
+
+<div class="StoryLineW"> 
+<p>The first path you start to see light in the distance.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div> 
+
+<div class="GameDiv">
+<!-- forset image from https://pixabay.com/vectors/forest-trees-evergreen-conifers-310072/ --> 
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="MiddleButton" onclick="showMusic()"> Music & Smoke </button> <!-- Middle -->
+<button type="button" class="RightButton" onclick="showDarkness()"> Darkness </button> <!-- Right -->
+<button type="button" class="LeftButton" onclick="showLight()"> Light </button> <!-- Left -->
+
+</div> 
+
+</section>
+
+<!-- Darkness -->
+
+<section id="darkness">
+<div class="StoryLineW3"> 
+<p>In the distance of the second path, you hear movement. You are unsure if it is an animal or a human.</p> 
+
+<button type="button" class="hide3">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW2"> 
+<p>Down the first path, you hear car noises.</p>
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>Once you entered the darkness, you decided to use your phone for light.
+However, it isn’t a single path liked you assumed it was, you see there are there another three paths to 
+pick from.</p>
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div>
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="RightButton" onclick="showMovement()">Movement noises</button>
+
+<button type="button" class="LeftButton" onclick="showCar()">Car noises</button> 
+</div>
+</section>
+
+<!-- movement -->
+
+
+<section id="movemntPage">
+<div class="StoryLineW2"> 
+<p>There’s nowhere to go, you have to go back.</p>  
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>You entered the grove of trees; you still hear the noises, but you can’t see anyone however you can see the 
+glow of yellow eyes throughout the gaps between the trees.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div>
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="RestartButton2" onclick="turnBackDarkness()"><b>Go Back<b></button>
+</div> 
+</section>
+
+<!-- Car Nosies --> 
+<section id="car">
+<div class="StoryLineW"> 
+<p>Down the path you still can’t see anything that can help you, but you can see hear the car noises. 
+While looking around the grove of trees you only see one path, so you go down it. </p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div>
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="RestartButton2" onclick="showRandomMan()"><b>Go Forward<b></button>
+</div>
+</section> 
+
+<!-- Random Man --> 
+<section id="Random">
+
+<div class="StoryLineW3"> 
+<p>You have to restart the game.</p>
+
+<button type="button" class="hide3">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW2"> 
+<p>You try to go back up the path but he doesn’t let you.</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>While walking down the path, the car noises get lounder. With your flashlight, you see a speaker on the ground. 
+While looking up from the speaker you see a man sitting on a fallen down tree, waiting.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div>
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="RestartButton2" onclick="RestartRandom()"><b>Restart<b></button>
+</div> 
+</section>
+
+<!-- Music -->
+<section id="music">
+
+<article id="musicPath"> 
+<p> Ah, so you have decided to enter the second option.
+While walking through the path, it divides into two more paths. </p>
+</article> 
+
+<div class="StoryLineW2"> 
+<p>Down the second path, you can’t see anything, but you see the smoke. However, you see the top of a house</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>Down one path, you start to hear music that gets louder.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div> 
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+ 
+<button type="button" class="RightButton2" onclick="showMusicLounder()"> Music gets Louder </button> 
+<button type="button" class="LeftButton2" onclick="showHouse()"> Abandoned house  </button> 
+</div> 
+</section> 
+
+<!-- Abandoned House -->
+<section id="house">
+<!-- house image from https://pixabay.com/vectors/graphic-haunted-house-house-3869667/ -->
+<img src="hauntedHouse.svg" id="Houseforset">
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetHouse">  
+<button type="button" class="RestartButton2" onclick="RestartHouse()"><b>Restart<b></button>
+</div> 
+
+<div class="StoryLineW3"> 
+<p>There’s no way out, you to restart the game.</p> 
+
+<button type="button" class="hide3">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW2"> 
+<p>You walk up to the door, knock, and wait. After a few seconds, the door opens, you try to say thanks to the owner, 
+but no one is there. You decide to walk in, hoping to find help. BANG, the door shuts behind you. You are stuck in the 
+house.</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>While walking through the path, you start to see a stoned wall going through the trees but you keeping walking on. 
+While you’re walking you start to see a house and the smoke starts the get bigger, so you run to it. Hoping there’s 
+someone inside.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div>
+</section>
+
+<!-- music lounder -->
+<section id="muiscLounder">
+<div class="StoryLineW3"> 
+<p>There’s nowhere to go, you have to go back.</p> 
+
+<button type="button" class="hide3">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW2"> 
+<p>You see the differences between the grass where tents once stood, you see some crinkled-up packs of crisps, 
+a fire pit that still has smoke but in the centre of this, you find a speaker playing We Will Rock you by Queen</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>Down the path you see what used to be a campsite.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div>   
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+ 
+<button type="button" class="RestartButton2" onclick="turnBackMusicLounder()">Turn Back</button> 
+</div>
+</section>
+
+<!-- Light --> 
+<section id="light">
+<div class="StoryLineW3"> 
+<p>Down the third path you realise it takes you back to the single-track road.</p> 
+
+<button type="button" class="hide3">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW2"> 
+<p>Down the second path, the light disappears.</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>You see that the first path the light starts to get darker, but it is still there just hardly.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div> 
+
+
+<article id="LightPaths"> 
+<p>Once you have entered the light. 
+You start to realise, 
+how alone you are in the woods. 
+After this realisation, you once again notice two paths.</p>
+</article> 
+
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="RightButton" onclick="showSingleRoad()">Single-Track Road</button>
+<button type="button" class="MiddleButton" onclick="showCampers()">Light disappears</button> 
+<button type="button" class="LeftButton" onclick="showClothes()">Light dies down</button> 
+
+</div> 
+</section>
+
+<!-- Single Road --->
+<section id="singleRoad">
+<div class="StoryLineW3"> 
+<p>You must restart the game.</p> 
+
+<button type="button" class="hide3">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW2"> 
+<p>While walking through the path, you realise you have ended back onto the single-track road.</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>Are we really going to play this game? In the last screen it literally says, “you see the single-track road.” 
+Why did you pick this path? Anyway, we’re go along with the rest of the game:</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div> 
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="RestartButton2" onclick="RestartRoad()"><b>Restart<b></button>
+</div>
+</section>
+
+<!-- Abandoned Clothes -->
+<section id="clothes">
+<div class="StoryLineW"> 
+   <p>While walking down the path, you find a pile abandoned clothes. You start to panic, 
+so you run away as fast as possible.
+  </p>
+  <button type="button" class="hide1">
+<b>Next<b></button>
+</div>
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="RestartButton2" onclick="turnBackClothes()"><b>Go Back<b></button>
+</div> 
+</section> 
+
+<!-- Campers -->
+<section id="campers">
+<div class="StoryLineW2"> 
+<p>You have to start using your phone as a flashlight as the light disappears. While walking down the path, 
+you see a campsite with the firepit that still has a flame.</p> 
+
+<button type="button" class="hide2">
+<b>Next<b></button>
+</div> 
+
+<div class="StoryLineW"> 
+<p>Finally, you find a group of campers, you tell them you got lost 5 miles ago and that your car broke down. 
+They offer to take you back to town to get your car.</p> 
+
+<button type="button" class="hide1">
+<b>Next<b></button>
+</div>
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<img src="giphy.2.gif" id="fire" > <!-- https://giphy.com/stickers/animation-fire-EfpSB84AuYM6uiZOwZ -->
+<button type="button" class="RestartButton2" onclick="showEndScreen()"><b>Help<b></button>
+</div> 
+</section>
+
+<!-- End Screen --> 
+<section id="EndScreen">
+<article id="endInfo"> 
+<p>Well done you found the right path to get you back to town. You decided to stay in a B&B for one night, 
+then when morning comes you finally get help to fix your car. </p> 
+</article> 
+<article id="endInfo2"> 
+<p>After a long night you finally get back on the road to your lodge.</p> 
+</article>
+
+<img src="CarGreen.svg" id="CarImg"> <!--car image from https://pixabay.com/vectors/automobile-car-citroen-france-1299695/ -->
+
+<div class="GameDiv">
+<img src="workpls.svg" id="forsetMoving"> 
+<button type="button" class="RestartButton2" onclick="RestartGame()"><b>Play Again<b></button>
+</div>
+</section> 
+</body>
+</html> 

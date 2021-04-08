@@ -1,0 +1,90 @@
+/* Home page css */
+
+body {
+    background-color: #000000;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	font-weight: normal;
+}
+
+button {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	outline: none;
+}
+
+#HomeDiv {
+		padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50em;
+    height: 37.5em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	background-color: #001524;
+}
+
+#HomeButton{
+  background-color: #931621; 
+  color: black; 
+  border: 2px solid #931621;
+  padding: 16px 64px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  z-index: 5;
+  color: white;
+  font-size: 1.25em;
+
+}
+#HomeButton:hover {
+	 background-color: #590D14;
+     color: white;
+	 border: 2px solid #590D14;
+}
+
+/* typing code */
+/* source code from https://codepen.io/denic/pen/GRoOxbM */
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.typing-demo {
+  width: 15ch;
+  animation: typing 2s steps(15), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 5em;
+  color: #ffffff;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
