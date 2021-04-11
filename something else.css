@@ -244,22 +244,6 @@ button {
 	font-weight: normal;
 }
 
-#LightDisappears:hover {
-	background-color: black;
-	color: white;
-	border: 2px solid black;
-}
-
-#lightButton:hover {
-	background-color: white;
-	color: black;
-}
-
-#DarknessButton:hover {
-	background-color: black;
-	color: white;
-}
-
 .forsetMoving {
   width: 100%;
   height: auto;
@@ -527,6 +511,23 @@ button {
 	font-weight: normal;
 }
 
+#namw {
+ background-color: #A02128;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  width: 10%;
+  margin: 20px;
+  font-size: 25px;
+  position: absolute;
+  top: 80px;
+}
+#namw:hover {
+background-color: #590D14;
+}
+
 /* pop screen & Audio */
 
 /* source code for Modal from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
@@ -639,5 +640,4 @@ border: 1px solid black;
 	margin: auto;
 }
 
- 
  
