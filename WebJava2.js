@@ -1,9 +1,6 @@
 //JavaScript for "Lost in the Woods"
 
 
-//JavaScript for "Lost in the Woods"
-
-
 $(document).ready(function(){
 	$(".hide1").click(function(){
 		$(".StoryLineW").hide();
@@ -262,4 +259,15 @@ function pauseAudio() {
 	audio3.pause();
     audio4.pause();
 	audio5.pause();
+}
+
+// get the players name
+// source code from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
+function myFunction() {
+  var person = prompt("Please enter your name");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+person + " is driving in the North of Scotland going back to their lodge they rented." +
+" While driving on a single-track road, the car breaks down. It is during the" + 
+" night, in the winter and you don’t plan to be stranded in the middle of nowhere all night."  }
 }
