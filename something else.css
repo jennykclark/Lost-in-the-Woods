@@ -443,6 +443,14 @@ button {
     height: 37.5em;
 }
 
+#nightPic {
+	width: 50.3125em;
+	height: 38.8125em;
+}
+
+#endS {
+	background-color: black;
+}
 /* Camper */ 
 #fire{
 	 position:absolute;
@@ -644,5 +652,3 @@ border: 1px solid black;
 	padding: 10px;
 	margin: auto;
 }
-
- 
