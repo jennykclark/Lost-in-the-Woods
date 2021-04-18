@@ -83,7 +83,7 @@ button {
 
 
 /* Abandoned House Screen */
-/* https://pixabay.com/vectors/forest-trees-evergreen-conifers-310072/ (the forest pic) */
+
 
 
 #Houseforset {
@@ -244,6 +244,7 @@ button {
 	font-weight: normal;
 }
 
+/* forset from https://pixabay.com/vectors/forest-trees-silhouette-sky-winter-4023012/ */
 .forsetMoving {
   width: 100%;
   height: auto;
